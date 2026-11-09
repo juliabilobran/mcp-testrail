@@ -1,5 +1,5 @@
 {
-  "name": "@bun913/mcp-testrail",
+  "name": "@yuliabilobran/mcp-testrail",
   "author": "bun913",
   "homepage": "https://github.com/bun913/mcp-testrail",
   "private": false,
@@ -21,13 +21,14 @@
     "test:ci": "vitest run ./test --silent --coverage --reporter=verbose",
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "playwright-cli": "playwright-cli"
+    "playwright-cli": "playwright-cli",
+    "prepare": "npm run build"
   },
   "devDependencies": {
+    "@playwright/cli": "^0.1.1",
     "@types/node": "^22.13.14",
     "@vitest/coverage-v8": "^4.1.8",
     "typescript": "~5.7.2",
-    "@playwright/cli": "^0.1.1",
     "vitest": "^4.1.8"
   },
   "dependencies": {
@@ -42,7 +43,7 @@
     "node": ">=20.18.1"
   },
   "bin": {
-    "mcp-testrail": "./dist/stdio.js"
+    "mcp-testrail": "dist/stdio.js"
   },
   "repository": {
     "type": "git",
